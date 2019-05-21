@@ -250,10 +250,18 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 900px;
 }
 
 .links ul li {
   margin-bottom: 0.8rem;
+  display: block;
+  width: 240px;
+  overflow: hidden;
 }
 
 .vcs-switch {
