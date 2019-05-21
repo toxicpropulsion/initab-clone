@@ -341,3 +341,33 @@ a:hover {
 .vcs-items__item .desc {
   color: #fff;
 }
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  margin: 1.5rem 0.8rem;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+}
+
+.input-group input {
+}
+
+.input-group textarea {
+  min-height: 250px;
+  scrollbar-width: none;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  background-color: #504945;
+  border: none;
+  border-radius: 2px;
+  padding: 0.4rem;
+  color: #ebdbb2;
+}
+
+#settings {
+  flex-flow: row wrap;
+}

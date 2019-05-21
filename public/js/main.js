@@ -67,4 +67,26 @@ const DEFAULT_LINKS = [
   }
 
   renderWebLinks();
+
+  // Settings custom web links
+  const customLinksTextarea = document.getElementById("webLinksTextarea");
+
+  function readLinksFromTextarea(textarea) {
+    return textarea.value.split(",");
+  }
+
+  function writeLinksToTextarea(textarea, links) {
+    textarea.value = links;
+  }
+
+  document.addEventListener("DOMContentLoaded", event => {
+    const customLinks = localStorage.getItem("links");
+    writeLinksToTextarea(customLinksTextarea, customLinks);
+  });
+
+  customLinksTextarea.addEventListener("change", event => {
+    const customLinks = readLinksFromTextarea(customLinksTextarea);
+    setCustomWebLinks(customLinks);
+    renderWebLinks();
+  });
 })();
