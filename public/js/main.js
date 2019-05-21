@@ -79,6 +79,38 @@ const DEFAULT_LINKS = [
     textarea.value = links;
   }
 
+  // Timetable
+  function getCurrentTime() {
+    const d = new Date();
+    const hours = d.getHours();
+    const minutes = d.getMinutes();
+    const seconds = d.getSeconds();
+    return `${hours}:${minutes}`;
+  }
+
+  function getCurrentDate() {
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    };
+    const today = new Date();
+    const date = today.toLocaleDateString(undefined, options);
+    return date;
+  }
+
+  function updateTimetable() {
+    const timetable = document.getElementById("datetime");
+    const time = getCurrentTime();
+    const date = getCurrentDate();
+    timetable.innerHTML = `<span class="time">${time}</span><span class="date">${date}</span>`;
+  }
+
+  updateTimetable();
+
+  setInterval(updateTimetable, 1000);
+
   document.addEventListener("DOMContentLoaded", event => {
     const customLinks = localStorage.getItem("links");
     writeLinksToTextarea(customLinksTextarea, customLinks);

@@ -141,22 +141,11 @@
         </div>
 
         <div class="column middle">
-          <div class="block">
-            <h3 class="block__heading">Relevant JavaScript history</h3>
-            <div class="history">
-              <ul class="history__list">
-                <li>
-                  <a href="#">Lorem ipsum dolor sit amet.</a>
-                  <span class="time">2 days ago</span>
-                </li>
-                <li>
-                  <a href="#"
-                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.</a
-                  >
-                  <span class="time">2 days ago</span>
-                </li>
-              </ul>
-            </div>
+          <div class="block timepanel">
+            <section id="datetime" class="datetime">
+              <span class="time">15:22</span>
+              <span class="date">Tuesday, May 21, 2019</span>
+            </section>
           </div>
           <div class="block">
             <h3 class="block__heading">Custom web links</h3>
@@ -228,7 +217,10 @@
       </div>
       <div id="settings" class="box">
         <div class="input-group">
-          <label for="webLinksTextarea">Write your custom web links here, separated by comma (e.g https://google.com, https://github.com, etc.).</label>
+          <label for="webLinksTextarea"
+            >Write your custom web links here, separated by comma (e.g
+            https://google.com, https://github.com, etc.).</label
+          >
           <textarea name="webLinksTextarea" id="webLinksTextarea"></textarea>
         </div>
       </div>

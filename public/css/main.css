@@ -371,3 +371,28 @@ a:hover {
 #settings {
   flex-flow: row wrap;
 }
+
+.timepanel {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.timepanel .datetime {
+  text-align: center;
+}
+
+.timepanel .datetime span {
+  display: block;
+}
+
+.timepanel .datetime .time {
+  font-size: 6rem;
+}
+
+.timepanel .datetime .date {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
