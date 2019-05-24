@@ -111,6 +111,36 @@ const DEFAULT_LINKS = [
 
   setInterval(updateTimetable, 1000);
 
+  // tabs
+  function toggleTab(tab) {
+    const isActive = tab.classList.contains("active");
+    if (isActive) return false;
+    deactivateElements(tab.parentNode.children);
+    tab.classList.add("active");
+    const dataTarget = tab.dataset.target;
+    if (dataTarget) {
+      const target = document.getElementById(dataTarget);
+      deactivateElements(target.parentNode.children);
+      target.classList.add("active");
+    }
+    return true;
+  }
+
+  function deactivateElements(elements) {
+    const len = elements.length;
+    for (let i = 0; i < len; i++) {
+      elements[i].classList.remove("active");
+    }
+  }
+
+  const tabs = document.querySelectorAll(".tab");
+  tabs.forEach(tab => {
+    tab.addEventListener("click", event => {
+      event.preventDefault();
+      toggleTab(event.target);
+    });
+  });
+
   document.addEventListener("DOMContentLoaded", event => {
     const customLinks = localStorage.getItem("links");
     writeLinksToTextarea(customLinksTextarea, customLinks);

@@ -174,41 +174,60 @@
             <!-- <a class="vcs-switch" href="#">switch to gitlab</a> -->
             <div class="vcs">
               <div class="vcs-tabs">
-                <a class="tab active" href="#">Issues</a>
-                <a class="tab" href="#">Pull Requests</a>
+                <a class="tab active" data-target="vcs-issues" href="#"
+                  >Issues</a
+                >
+                <a class="tab" data-target="vcs-pr" href="#">Pull Requests</a>
               </div>
-              <div class="vcs-items">
+              <div id="vcs-issues" class="vcs-items vcs-issues active">
                 <div class="vcs-items__item">
-                  <span class="repo">Repo: facebook/draft.js</span>
-                  <span class="issue">Issue #1796</span>
+                  <span class="repo"
+                    >Repo: <a href="#">facebook/draft.js</a></span
+                  >
+                  <span class="issue"><a href="#">Issue #1796</a></span>
                   <span class="desc"
                     >this.state.contentState.createEntity is not a
                     function</span
                   >
                 </div>
                 <div class="vcs-items__item">
-                  <span class="repo">Repo: facebook/draft.js</span>
-                  <span class="issue">Issue #1796</span>
+                  <span class="repo"
+                    >Repo: <a href="#">facebook/draft.js</a></span
+                  >
+                  <span class="issue"><a href="#">Issue #1796</a></span>
                   <span class="desc"
                     >this.state.contentState.createEntity is not a
                     function</span
                   >
                 </div>
                 <div class="vcs-items__item">
-                  <span class="repo">Repo: facebook/draft.js</span>
-                  <span class="issue">Issue #1796</span>
+                  <span class="repo"
+                    >Repo: <a href="#">facebook/draft.js</a></span
+                  >
+                  <span class="issue"><a href="#">Issue #1796</a></span>
                   <span class="desc"
                     >this.state.contentState.createEntity is not a
                     function</span
                   >
                 </div>
                 <div class="vcs-items__item">
-                  <span class="repo">Repo: facebook/draft.js</span>
-                  <span class="issue">Issue #1796</span>
+                  <span class="repo"
+                    >Repo: <a href="#">facebook/draft.js</a></span
+                  >
+                  <span class="issue"><a href="#">Issue #1796</a></span>
                   <span class="desc"
                     >this.state.contentState.createEntity is not a
                     function</span
                   >
+                </div>
+              </div>
+              <div id="vcs-pr" class="vcs-items vsc-pr">
+                <div class="vcs-items__item">
+                  <span class="repo"
+                    >Repo: <a href="#">facebook/draft.js</a></span
+                  >
+                  <span class="issue"><a href="#">PR #123</a></span>
+                  <span class="desc">Merging feature into master</span>
                 </div>
               </div>
             </div>
