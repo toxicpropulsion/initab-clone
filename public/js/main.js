@@ -82,9 +82,10 @@ const DEFAULT_LINKS = [
   // Timetable
   function getCurrentTime() {
     const d = new Date();
-    const hours = d.getHours();
-    const minutes = d.getMinutes();
-    const seconds = d.getSeconds();
+    let hours = d.getHours();
+    let minutes = d.getMinutes();
+    hours = hours < 10 ? `0${hours}` : hours;
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
     return `${hours}:${minutes}`;
   }
 
