@@ -43,6 +43,48 @@ a:hover {
 #root .menu {
   width: 10vw;
   background-color: rgba(251, 241, 199, 0.1);
+  justify-content: space-between;
+}
+
+.menu .social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu .social .initab-logo img {
+  max-width: 100%;
+  opacity: 0.6;
+}
+
+.menu .social .initab-logo img:hover {
+  opacity: 1;
+}
+
+.menu .social .social-links {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 0;
+  width: 100%;
+}
+
+.social .social-links li > a {
+  background-color: #458588;
+  color: #fbf1c7;
+  border-radius: 50%;
+  width: 30px;
+  display: inline-block;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  transition: all 0.2s ease;
+}
+
+.social .social-links li > a:hover {
+  background-color: #83a598;
 }
 
 #root .box {
