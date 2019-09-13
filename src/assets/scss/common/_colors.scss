@@ -1,0 +1,35 @@
+:root,
+[data-theme='default'] {
+  --color-bg: #1d2021;
+
+  --color-primary: #fe8019;
+  --color-secondary: #b8bb26;
+  --color-accent: #fb4934;
+  --color-neutral: #928374;
+  --color-contrast: #fbf1c7;
+
+  --color-primary-faded: #d65d0e;
+  --color-secondary-faded: #98971a;
+  --color-accent-faded: #cc241d;
+  --color-neutral-faded: #a89984;
+  --color-contrast-faded: #ebdbb2;
+}
+
+[data-theme] {
+  background-color: var(--color-bg);
+  color: var(--color-contrast);
+
+  a {
+    color: var(--color-secondary);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--color-secondary-faded);
+    }
+
+    &:visited {
+      color: var(--color-neutral);
+    }
+  }
+}

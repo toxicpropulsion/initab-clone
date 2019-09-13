@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <h1>KEK</h1>
+    <h1>Qeq</h1>
+    <a href="#">some ref</a>
   </div>
 </template>
 
