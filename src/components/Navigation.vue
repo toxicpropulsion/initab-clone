@@ -38,6 +38,7 @@ export default {
   left: 0;
   transform: translateX(-100%);
   background-color: var(--color-bg);
+  z-index: 10;
 
   &.toggled {
     transform: translateX(0);
